@@ -15,7 +15,7 @@ export default {
     goBack () {
       // 如果有from参数，说明是从需要登录权限的页面跳转过来的，那么这个时候不登陆是回不去的，所以就返回首页
       // 没有from参数，说明是正常跳转，那么就沿着历史纪录回去就行了
-      const {from} = this.$route.params
+      const { from } = this.$route.params
       if (from) {
         this.$router.push('/')
       } else {

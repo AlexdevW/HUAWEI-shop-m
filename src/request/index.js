@@ -1,7 +1,6 @@
 // import Vue from 'vue'
 import axios from 'axios'
 import { Indicator } from 'mint-ui'
-import { userInfo } from 'os';
 
 const ajax = axios.create()
 

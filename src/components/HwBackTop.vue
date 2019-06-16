@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     class="hw-back-top"
     v-back="{ container, distance }"
     @click="toTop"
@@ -29,14 +29,14 @@ export default {
   directives: {
     back: {
       inserted (el, binding) {
-        console.log({el, binding})
+        console.log({ el, binding })
         // 滚动事件
         // console.log(document.querySelector(binding.value.container).scrollHeight)
         document.querySelector(binding.value.container).addEventListener('scroll', (e) => {
           if (e.target.scrollTop > binding.value.distance) {
-            el.style.display = "block"
+            el.style.display = 'block'
           } else {
-            el.style.display = "none"
+            el.style.display = 'none'
           }
         })
       }
