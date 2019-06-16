@@ -19,7 +19,9 @@
 import Swiper from 'swiper'
 import SwiperCss from 'swiper/dist/css/swiper.min.css'
 import * as ajax from '@/request'
+import { constants } from 'crypto';
 export default {
+  name: 'home', // 组件的name
   data () {
     return {
       banners: ''
@@ -33,6 +35,12 @@ export default {
         this.initSwiper()
       })
     })
+  },
+  activated () { // 进入
+    console.log(1)
+  },
+  deactivated () { // 失活
+    console.log(2)
   },
   methods: {
     initSwiper () {

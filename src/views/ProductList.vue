@@ -2,7 +2,7 @@
   <div
     v-infinite-scroll="onLoadMore"
     infinite-scroll-distance="10"
-    infinite-scroll-disabled="isLoading"
+    infinite-scroll-disabled="isLoading" 
   >
     <ProductItem
       v-for="productItem in list"
@@ -61,7 +61,7 @@ export default {
   methods: {
     // 请求列表的方法
     getList () {
-      this.isLoading = true
+      this.isLoading = true // 解决重复请求bug
       ajax.getProductList(this.id, this.nextIndex).then(resp => {
         console.log(resp.data.items)
         // this.list = resp.data.items.list

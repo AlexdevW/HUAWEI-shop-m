@@ -4,7 +4,9 @@
       <HwHeader></HwHeader>
     </div>
     <div class="hw-app-main">
-      <router-view></router-view>
+      <keep-alive include="home">
+        <router-view></router-view>
+      </keep-alive>
     </div>
     <div class="hw-app-footer">
       <router-view name="footer"></router-view>
