@@ -54,6 +54,7 @@ export default {
   [ON_ADD_CART] (state, shopInfo) {
     const isExist = state.cart.some(item => item.id === shopInfo.id)
     if (isExist) {
+      console.log(state.count)
       state.cart = state.cart.map(item => {
         if (item.id === shopInfo.id) item.count++
         return item
